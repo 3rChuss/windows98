@@ -205,6 +205,8 @@ body {
     background: var(--color-gris);
     display: inline-block;
     position: relative;
+    width: 700px;
+    height: 500px;
 }
 .window-titulo {
     position: relative;
@@ -240,14 +242,16 @@ div:hover .cerrar, .maximizar, .minizar  {
 }
 
 .window-menu {
-    position: relative;
     border: 1px solid gray;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
 }
 
 .window-menu ul {
     margin: 0;
     padding: 0;
-    float: left;
+    display: inline-block;
 }
 
 .window-menu ul li {
@@ -257,23 +261,78 @@ div:hover .cerrar, .maximizar, .minizar  {
     font-size: 14px;
 }
 
+.window-menu ul li::first-letter {
+    text-decoration: underline;
+}
+
 .windows-icono{
-    display: inline-block;
     float: right;
 }
+    
 .windows-icono img {
+    width: 22px;
+    margin: 1px 10px;
 }
 
 .window-direccion {
-    
+    font-size: 14px;
+    padding: 4px 6px 5px;
+    position: relative;
+    border: 1px solid gray;
+    text-align: left;
+}
+.direccion {
+    display: inline;
+    background-color: white;
+    border-top: var(--borde-oscuro);
+    border-left: var(--borde-oscuro);
+    border-bottom: var(--borde-claro);
+    border-right: var(--borde-claro);
+    padding: 2px 4px;
+}
+.direccion-desplegable {
+    float: right;
+    border: 1px solid gray;
+    padding-left: 5px;
+    border-top: var(--borde-claro);
+    border-left: var(--borde-claro);
+    border-bottom: var(--borde-oscuro);
+    border-right: var(--borde-oscuro);
+}
+
+.direccion img { 
+    padding: 0 5px 0 5px;
+    width: 25px;
 }
 
 .window-contenido {
-    position: relative;
+    display: inline;
     padding: 18px 90px 20px 100px;
     font-size: 14px;
     text-align: left;
 }
+.window-aside {
+    position: absolute;
+    width: 30%;
+}
+.window-aside h1, .window-aside img {
+    margin: 0;
+    padding: 30px 0 0 20px;
+}
+
+.coloreado {
+    position: relative;
+    left: 0;
+    border: 0;   /* in order to override TWBS stylesheet */
+    height: 3px;
+    background: -ms-linear-gradient(left, rgba(248,82,53,1), rgba(255,216,54,1), rgba(131,216,86,1), rgba(54,170,200,1));
+    background: linear-gradient(to right, rgba(248,82,53,1), rgba(255,216,54,1), rgba(131,216,86,1), rgba(54,170,200,1))
+}   
+.contenido {
+    display: inline-block;
+    margin: 0;
+}
+
 
 
 
