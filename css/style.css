@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Paleta de colores de Windows 98*/
+:root{
+    --color-teal:    #008080;
+    --color-gris:    #c0c0c0;
+    --borde-claro:   2px solid white;
+    --borde-medio:   2px solid #666;
+    --borde-oscuro:  2px solid #222;
+
+    --windows-titulo-grafient: linear-gradient(90deg, #000184, #0f80cd);
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: light;
+}
+
+.escritorio, body {
+    background: var(--color-teal);
+    height: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.iconos-escritorio {
+    margin: 10px;
+    text-align: center;
+    position: absolute;
+}
+.icon {
+    display: block;
+    margin-bottom: 20px;
+}
+.icon img {
+    display: block;
+    margin: 5px auto;
+}
+.icon p {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+.inicio {
+    background: var(--color-gris);
+    height: 38px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid #efefef;
+    padding: 3px;
+    z-index: 9999;
+}
+
+.reloj-inicio {
+    border-top: var(--borde-medio);
+    border-left: var(--borde-medio);
+    border-right: var(--borde-claro);
+    border-bottom: var(--borde-claro);
+    float: right;
+    padding: 5px 15px 0 15px;
+    font-size: 14px;
+}
+#reloj {
+    padding: 0 2px 0 10px;
+}
+
+.mini-icons{
+    padding: 0 5px 0 5px;
+    position: relative;
+    float: left;
+
+}
+.mini-icons img {
+    width: 17px;
+}
+
+.btn-inicio {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    line-height: 25px;
+    font-weight: bold;
+    padding: 0 7px 0 31px;
+    height: 29px;
+    background-color: var(--color-gris);
+    border-top: var(--borde-claro);
+    border-left: var(--borde-claro);
+    border-right: var(--borde-oscuro);
+    border-bottom: var(--borde-oscuro);
+    background-image: url('../img/win98_icons/windows.ico');
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 22px;
+}
+
+.menu-inicio {
+    position: absolute;
+    bottom: 38px;
+    background: var(--color-gris);
+    padding: 0px;
+    font-size: 14px;
+    left: 0;
+    border-left: var(--borde-claro);
+    border-top: var(--borde-claro);
+    border-bottom: var(--borde-oscuro);
+    border-right: var(--borde-oscuro);
+    display: none;
+}
+.side-titulo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 37px;
+    height: 100%;
+    background: linear-gradient( #000184 60%, #0f80cd);
+}
+
+.titulo{
+    display: block;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    color: white;
+    top: 480px;
+    left: -51px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.titulo span {
+    font-weight: 100;
+}
+
+.menu-inicio hr {
+    margin: 0 4px 0 40px;
+}
+
+.menu-inicio ul {
+    margin: 0;
+    padding: 0;
+}
+.menu-inicio ul li {
+    padding: 18px 100px 18px 100px;
+    list-style: none;
+    background-repeat: no-repeat;
+    background-size: 33px;
+    background-position: 48px center;
+}
+
+.w-update{
+    background-image: url('../img/win98_icons/windows_update_large.ico');
+}
+
+.menu-inicio li:nth-child(3) {
+    background-image: url('../img/win98_icons/directory_program_group.ico');
+}
+.menu-inicio li:nth-child(4) {
+    background-image: url('../img/win98_icons/directory_favorites.ico');
+}
+.menu-inicio li:nth-child(5) {
+    background-image: url('../img/win98_icons/directory_open_file_mydocs.ico');
+}
+.menu-inicio li:nth-child(6) {
+    background-image: url('../img/win98_icons/settings_gear.ico');
+}
+.menu-inicio li:nth-child(7) {
+    background-image: url('../img/win98_icons/search_file.ico');
+}
+.menu-inicio li:nth-child(8) {
+    background-image: url('../img/win98_icons/help_book_big.ico');
+}
+.menu-inicio li:nth-child(9) {
+    background-image: url('../img/win98_icons/application_hourglass.ico');
+}
+.menu-inicio li:nth-child(11) {
+    background-image: url('../img/win98_icons/key_win_alt.ico');
+}
+.menu-inicio li:nth-child(12) {
+    background-image: url('../img/win98_icons/shut_down_with_computer.ico');
+}
+
+.menu-inicio ul li:hover {
+    background-color: #000184;
+    color: white;
+    cursor: pointer;
+}
+
+
+.windows-explorer {
+    /* display: none; */
+    position: relative;
+    text-align: center;
+}
+.window {
+    border-top: var(--borde-claro);
+    border-left: var(--borde-claro);
+    border-bottom: var(--borde-oscuro);
+    border-right: var(--borde-oscuro);
+    margin: 20px auto;
+    background: var(--color-gris);
+    display: inline-block;
+    position: relative;
+}
+.window-titulo {
+    position: relative;
+    background: var(--windows-titulo-grafient);
+    padding: 4px 6px 5px;
+    color: white;
+    font-size: 15px;
+    margin-right: 2px;
+    text-align: left;
+}
+.window-titulo:hover{
+    cursor: move;
+}
+.btn-ventana {
+    font-size: 12px;
+    color: black;
+    background: var(--color-gris);
+    text-align: center;
+    width: 21px;
+    height: 19px;
+    right: 3px;
+    top: 3px;
+    border-top: var(--borde-claro);
+    border-left: var(--borde-claro);
+    border-bottom: var(--borde-oscuro);
+    border-right: var(--borde-oscuro);
+    line-height: 16px;
+    font-family: helvetica;
+    float: right;
+}
+div:hover .cerrar, .maximizar, .minizar  {
+    cursor: default;
+}
+
+.window-menu {
+    position: relative;
+    border: 1px solid gray;
+}
+
+.window-menu ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.window-menu ul li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.windows-icono{
+    display: inline-block;
+    float: right;
+}
+.windows-icono img {
+}
+
+.window-direccion {
+    
+}
+
+.window-contenido {
+    position: relative;
+    padding: 18px 90px 20px 100px;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+
