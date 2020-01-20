@@ -52,6 +52,7 @@ body {
     width: 100%;
     position: fixed;
     bottom: 0;
+    left: 0;
     border-top: 2px solid #efefef;
     padding: 3px;
     z-index: 9999;
@@ -284,10 +285,10 @@ div:hover .cerrar, .maximizar, .minizar  {
 .direccion {
     display: inline;
     background-color: white;
-    border-top: var(--borde-oscuro);
+    border-top: var(--borde-medio);
     border-left: var(--borde-oscuro);
     border-bottom: var(--borde-claro);
-    border-right: var(--borde-claro);
+    border-right: var(--borde-oscuro);
     padding: 2px 4px;
 }
 .direccion-desplegable {
@@ -301,37 +302,53 @@ div:hover .cerrar, .maximizar, .minizar  {
 }
 
 .direccion img { 
-    padding: 0 5px 0 5px;
+    padding: 0 5px 1px 5px;
     width: 25px;
+    vertical-align: middle;
 }
 
 .window-contenido {
     display: inline;
-    padding: 18px 90px 20px 100px;
     font-size: 14px;
     text-align: left;
 }
 .window-aside {
-    position: absolute;
-    width: 30%;
+    position: relative;
+    overflow: scroll;
+    left: 0;
+    padding: 20px 0 0 20px;
+    font-size: 12px;
+    width: 220px;
+    float: left;
 }
+
+.contenido {
+    position: relative;
+    background-color: white;
+    overflow: scroll;
+}
+
 .window-aside h1, .window-aside img {
     margin: 0;
-    padding: 30px 0 0 20px;
 }
 
 .coloreado {
     position: relative;
+    padding: 0;
     left: 0;
     border: 0;   /* in order to override TWBS stylesheet */
     height: 3px;
     background: -ms-linear-gradient(left, rgba(248,82,53,1), rgba(255,216,54,1), rgba(131,216,86,1), rgba(54,170,200,1));
     background: linear-gradient(to right, rgba(248,82,53,1), rgba(255,216,54,1), rgba(131,216,86,1), rgba(54,170,200,1))
 }   
-.contenido {
-    display: inline-block;
-    margin: 0;
+
+.iconos-contenido {
+
 }
+.windows-icono {
+
+}
+
 
 
 
