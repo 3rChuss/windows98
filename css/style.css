@@ -1,12 +1,12 @@
-* {
-    box-sizing: border-box;
-}
+/*** DECLARACIONES GENERALES **********************************************************/
+
 
 @font-face {
-    font-style: 'MS';
     src: url('../font/MS.ttf');
+    font-family: 'MS', sans-serif;
 }
-/* Paleta de colores de Windows 98*/
+
+/*** PALETA DE COLORES DE WINDOWS 98 ***/
 :root{
     --color-teal:    #008080;
     --color-gris:    #c0c0c0;
@@ -16,12 +16,18 @@
     --windows-titulo-grafient: linear-gradient(90deg, #000184, #0f80cd);
 }
 
-
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'MS';
     font-weight: light;
 }
 
+
+/*****************************************************************************/
+/* ESCRITORIO
+/*****************************************************************************/
 .escritorio, body {
     background: var(--color-teal);
     height: 100vh;
@@ -38,20 +44,23 @@ body {
     position: relative;
     display: inline-block;
 }
-.icon {
-    display: block;
-    margin-bottom: 20px;
-}
-.icon img {
-    display: block;
-    margin: 5px auto;
-}
-.icon p {
-    color: white;
-    font-size: 14px;
-    margin: 0;
-}
+    .icon {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .icon img {
+        display: block;
+        margin: 5px auto;
+    }
+    .icon p {
+        color: white;
+        font-size: 14px;
+        margin: 0;
+    }
 
+/*****************************************************************************/
+/* BARRA INICIO
+/*****************************************************************************/
 .inicio {
     background: var(--color-gris);
     height: 38px;
@@ -70,22 +79,20 @@ body {
     border-right: var(--borde-claro);
     border-bottom: var(--borde-claro);
     float: right;
-    padding: 5px 15px 0 15px;
-    font-size: 16px;
+    padding: 3px 3px 2px 9px;
 }
-#reloj {
-    padding: 0 2px 0 10px;
-}
+    #reloj {
+        padding: 0 2px 0 10px;
+    }
 
 .mini-icons{
-    padding: 0 5px 0 5px;
+    padding: 0 3px 0 3px;
     position: relative;
     float: left;
-
 }
-.mini-icons img {
-    width: 17px;
-}
+    .mini-icons img {
+        width: 17px;
+    }
 
 .btn-inicio {
     display: inline-block;
@@ -105,8 +112,67 @@ body {
     background-position: 5px center;
     background-size: 22px;
 }
+/*** ACCESOS DIRECTOS MENU INICIO *************************************/
+.accesos-directos {
+    display: inline-block;
+    line-height: 25px;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+.vl-inicio {
+    position: relative;
+    display: inline;
+    height: 90%;
+    border-top: 1px solid rgb(238, 238, 252);
+    border-left: 1.5px solid rgb(238, 238, 252);
+    border-right: 1.5px solid #949494;
+    border-bottom: 1px solid #949494;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.ventana-abierta {
+    margin-left: 5px;
+    display: none;
+    line-height: 25px;
+    width: 200px;
+    border-right: var(--borde-claro);
+    border-bottom: var(--borde-claro);
+    border-top: var(--borde-oscuro);
+    border-left: var(--borde-oscuro);
+    cursor: default;
+}
+.lostfocus {
+    border-right: var(--borde-claro);
+    border-bottom: var(--borde-claro);
+    border-top: var(--borde-oscuro);
+    border-left: var(--borde-oscuro);
+    cursor: default;
+    line-height: 25px;
+    width: 200px;
+    margin-left: 5px;
+    display: inline-block;
+}
+.acceso-directo {
+    font-weight: bolder;
+    display: inline;
+    padding: 3px;
+    font-size: 14px;
+}
+.stripped {
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255,255,255,.3) 2px, transparent 2px, transparent 2px, rgba(255,255,255,.3) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255,255,255,.3) 1px, transparent 2px, transparent 2px, rgba(255,255,255,.3) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255,255,255,.3) 1px, transparent 2px, transparent 2px, rgba(255,255,255,.3) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255,255,255,.3) 2px, transparent 2px, transparent 2px, rgba(255,255,255,.3) 3px);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
+    }
 
+/*****************************************************************************/
+/* MENU INICIO
+/*****************************************************************************/
 .menu-inicio {
+    display: none;
     position: absolute;
     bottom: 38px;
     background: var(--color-gris);
@@ -117,7 +183,6 @@ body {
     border-top: var(--borde-claro);
     border-bottom: var(--borde-oscuro);
     border-right: var(--borde-oscuro);
-    display: none;
 }
 .side-titulo {
     position: absolute;
@@ -128,80 +193,83 @@ body {
     background: linear-gradient( #000184 60%, #0f80cd);
 }
 
-.titulo{
-    display: block;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    color: white;
-    top: 480px;
-    left: -51px;
-    font-size: 25px;
-    font-weight: bold;
-}
+    .titulo {
+        display: block;
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        color: white;
+        position: absolute;
+        bottom: 52px;
+        left: -42px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+        .titulo span {
+            font-weight: 100;
+        }
 
-.titulo span {
-    font-weight: 100;
-}
+    .menu-inicio hr {
+        margin: 0 4px 0 40px;
+    }
 
-.menu-inicio hr {
-    margin: 0 4px 0 40px;
-}
+    .menu-inicio ul {
+        margin: 0;
+        padding: 0;
+    }
+    .menu-inicio ul li {
+        padding: 18px 100px 18px 100px;
+        list-style: none;
+        background-repeat: no-repeat;
+        background-size: 33px;
+        background-position: 48px center;
+    }
+/*** ICONOS INICIO ***/
+        .w-update{
+            background-image: url('../img/win98_icons/windows_update_large.ico');
+        }
 
-.menu-inicio ul {
-    margin: 0;
-    padding: 0;
-}
-.menu-inicio ul li {
-    padding: 18px 100px 18px 100px;
-    list-style: none;
-    background-repeat: no-repeat;
-    background-size: 33px;
-    background-position: 48px center;
-}
+        .menu-inicio li:nth-child(3) {
+            background-image: url('../img/win98_icons/directory_program_group.ico');
+        }
+        .menu-inicio li:nth-child(4) {
+            background-image: url('../img/win98_icons/directory_favorites.ico');
+        }
+        .menu-inicio li:nth-child(5) {
+            background-image: url('../img/win98_icons/directory_open_file_mydocs.ico');
+        }
+        .menu-inicio li:nth-child(6) {
+            background-image: url('../img/win98_icons/settings_gear.ico');
+        }
+        .menu-inicio li:nth-child(7) {
+            background-image: url('../img/win98_icons/search_file.ico');
+        }
+        .menu-inicio li:nth-child(8) {
+            background-image: url('../img/win98_icons/help_book_big.ico');
+        }
+        .menu-inicio li:nth-child(9) {
+            background-image: url('../img/win98_icons/application_hourglass.ico');
+        }
+        .menu-inicio li:nth-child(11) {
+            background-image: url('../img/win98_icons/key_win_alt.ico');
+        }
+        .menu-inicio li:nth-child(12) {
+            background-image: url('../img/win98_icons/shut_down_with_computer.ico');
+        }
 
-.w-update{
-    background-image: url('../img/win98_icons/windows_update_large.ico');
-}
+    .menu-inicio ul li:hover {
+        background-color: #000184;
+        color: white;
+        cursor: pointer;
+    }
 
-.menu-inicio li:nth-child(3) {
-    background-image: url('../img/win98_icons/directory_program_group.ico');
-}
-.menu-inicio li:nth-child(4) {
-    background-image: url('../img/win98_icons/directory_favorites.ico');
-}
-.menu-inicio li:nth-child(5) {
-    background-image: url('../img/win98_icons/directory_open_file_mydocs.ico');
-}
-.menu-inicio li:nth-child(6) {
-    background-image: url('../img/win98_icons/settings_gear.ico');
-}
-.menu-inicio li:nth-child(7) {
-    background-image: url('../img/win98_icons/search_file.ico');
-}
-.menu-inicio li:nth-child(8) {
-    background-image: url('../img/win98_icons/help_book_big.ico');
-}
-.menu-inicio li:nth-child(9) {
-    background-image: url('../img/win98_icons/application_hourglass.ico');
-}
-.menu-inicio li:nth-child(11) {
-    background-image: url('../img/win98_icons/key_win_alt.ico');
-}
-.menu-inicio li:nth-child(12) {
-    background-image: url('../img/win98_icons/shut_down_with_computer.ico');
-}
-
-.menu-inicio ul li:hover {
-    background-color: #000184;
-    color: white;
-    cursor: pointer;
-}
-
-
+/*****************************************************************************/
+/* WINDOWS EXPLRER - MIS DOCUMENTOS
+/*****************************************************************************/
 .windows-explorer {
-    /* display: none; */
-    display: inline-block;
+    display: none;
     position: absolute;
+    top: 100px;
+    left: 300px;
 }
 .window {
     border-top: var(--borde-claro);
@@ -216,7 +284,7 @@ body {
     width: 700px;
     height: 500px;
     padding: 2px 4px 2px 2px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
     margin-bottom: -100px;
 }
 .window-titulo {
@@ -249,54 +317,58 @@ body {
     font-family: helvetica;
     float: right;
 }
-div:hover .cerrar, .maximizar, .minizar  {
+div:hover .cerrar, .maximizar, .minimizar  {
     cursor: default;
 }
-
+/*** MENU ARCHIVO **********************************************************/
 .window-menu {
     border: 1px solid #7b7b7b;
     text-align: left;
     width: 100%;
     position: relative;
     display: inline-block;
+    padding-left: 5px;
     box-shadow:inset 0px 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
-
 .window-menu ul {
     margin: 0;
     padding: 0;
     display: inline-block;
 }
-
 .window-menu ul li {
     text-decoration: none;
     display: inline-block;
     padding: 5px;
     font-size: 14px;
 }
-
 .window-menu ul li::first-letter {
     text-decoration: underline;
 }
-
+.window-menu li:hover {
+    border-top: 1px solid rgb(238, 238, 252);
+    border-left: 1px solid rgb(238, 238, 252);
+    border-right: 1px solid #949494;
+    border-bottom: 1px solid #949494;
+    padding: 1px;
+    cursor: default;
+}
 .windows-icono{
     float: right;
     position: relative;
-    border-left: 1px solid gray;
     background-color: black;
+    top: 1.5px;
+    border-left: 1px solid whitesmoke;
 }
-    
 .windows-icono img {
     height: 20px;
     padding: 0 20px 0 10px;
-    padding: 1px auto;
 }
-
+/*** BARRA DE DIRECCIONES **************************************************/
 .window-direccion {
     box-shadow:inset 0px 1px 1px 1px rgba(255, 255, 255, 0.5);
     font-size: 14px;
     padding-top: 3px;
-    padding-left: 3px;
+    padding-left: 10px;
     border: 1px solid gray;
     padding-bottom: 4px;
     text-align: left;
@@ -304,7 +376,6 @@ div:hover .cerrar, .maximizar, .minizar  {
     display: inline-block;
     width: 100%;
 }
-
 .direccion {
     position: relative;
     width: 90%;
@@ -316,59 +387,140 @@ div:hover .cerrar, .maximizar, .minizar  {
     background-color: white;
 }
 .direccion-desplegable {
-    border: 1px solid gray;
     border-top: var(--borde-claro);
     border-left: var(--borde-medio);
     border-bottom: var(--borde-oscuro);
     border-right: var(--borde-medio);
     background-color: var(--color-gris);
     float: right;
+    padding-left: 3px;
+    letter-spacing: 3px;
 }
-
 .direccion img { 
     padding: 0 5px 1px 5px;
     width: 25px;
 }
-
+/*** CONTENIDO CARPETA **********************************************************/
 .window-contenido {
-    
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 100%;
+    background-color: #ffffff;
 }
-
 .contenido-izq{
+    border-top: 1px solid black;
     overflow: hidden;
     float: left;
     height: 100%;
     width: 220px;
     padding: 20px 15px;
-    background-color: blue;
+    background-image: url('../img/folder_bq.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
 }
 .contenido-izq h1, .contenido-izq img {
     margin: 0;
 }
+.contenido-izq p {
+    width: 70%;
+    text-align: left;
+}
 .contenido-der {
+    border-top: 1px solid black;
     overflow: hidden;
     height: 100%;
 }
 .contenido-iconos {
-    background-color: white;
+    margin: 10px;
     width: 100%;
-    height: 100%;
-    position: absolute;
+    text-align: left;
+    position: relative;
 }
-
+.contenido-icono {
+    float: left;
+    position: relative;
+    width: 80px;
+    text-align: center;
+}
+.contenido-icono img {
+    width: 40px;
+}
 .coloreado {
     position: relative;
     padding: 0;
     left: -10px;
-    border: 0;   /* in order to override TWBS stylesheet */
+    border: 0;
     height: 3px;
     background: -ms-linear-gradient(left, rgba(248,82,53,1), rgba(255,216,54,1), rgba(131,216,86,1), rgba(54,170,200,1));
     background: linear-gradient(to right, rgba(248,82,53,1), rgba(255,216,54,1), rgba(131,216,86,1), rgba(54,170,200,1))
-}   
+}
+/*** LINEA VERTICAL ***/
+.vl {
+    position: absolute;
+    left: 3px;
+    bottom: 2px;
+    top: 2px;
+    border-top: 1px solid rgb(238, 238, 252);
+    border-left: 1.5px solid rgb(238, 238, 252);
+    border-right: 1.5px solid #949494;
+    border-bottom: 1px solid #949494;
+    display: block;
+}
+/*** CONTENEDORES PIE DE EXPLORER ***/
+.window-footer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    padding: 3px 0 3px 0; 
+}
+.footer-izq {
+    float: left;
+    width: 40%;
+    border-top: 1.5px solid #666;
+    border-left: 1.5px solid #666;
+    border-bottom: 1.5px solid  hsl(0, 0%, 91%);
+    border-right: 1.5px solid  hsl(0, 0%, 91%);
+    padding: 2px;
+}
+.footer-centro {
+    width: 10%;
+    border-top: 1.5px solid #666;
+    border-left: 1.5px solid #666;
+    border-bottom: 1.5px solid  hsl(0, 0%, 91%);
+    border-right: 1.5px solid  hsl(0, 0%, 91%);
+    padding: 2px;
+    display: inline-block;
+    margin-left: 3px;
+}
+.footer-der {
+    float: right;
+    width: 49%;
+    border-top: 1.5px solid #666;
+    border-left: 1.5px solid #666;
+    border-bottom: 1.5px solid hsl(0, 0%, 91%);
+    border-right: 1.5px solid hsl(0, 0%, 91%);
+    padding: 2px;
+
+}
+
+/*****************************************************************************/
+/* DECORADORES, LINKS, PSEUDOCLASES
+/*****************************************************************************/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+p {
+    cursor: default;
+}
+.seleccionado {
+    border: 1px dotted blue;
+}
+
 
 
 

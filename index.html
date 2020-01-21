@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="inicio">
-            <a class="btn-inicio" href="#menu" alt="Haga click para comenzar" title="Haga click para comenzar">Inicio</a>
+            <a class="btn-inicio" href="#" alt="Haga click para comenzar" title="Haga click para comenzar">Inicio</a>
             <div class="reloj-inicio">
                 <span id="reloj">5:45</span>
                 <div class="mini-icons">
@@ -62,17 +62,36 @@
                     <li>Apagar...</li>
                 </ul>
             </div>
+            <div class="vl-inicio"></div>
+            <div class="accesos-directos">
+                <div class="mini-icons">
+                    <img src="./img/win98_icons/console_prompt.ico" alt="MS-DOS" title="MS-DOS">
+                </div>
+                <div class="mini-icons">
+                    <img src="./img/win98_icons/msie1.ico" alt="IE" title="Internet Explorer">
+                </div>
+                <div class="mini-icons">
+                    <img src="./img/win98_icons/game_mine_1.ico" alt="Busca minas" title="Busca minas">
+                </div>
+            </div>
+            <div class="vl-inicio"></div>
+            <div id="minimizado" class="ventana-abierta stripped">
+                <div class="acceso-directo">
+                    Mis documentos
+                </div>
+            </div>
         </div>
-        <!-- VENTANAS -->
+        <!-- WINDOWS EXPLORER - MIS DOCUMENTOS -->
         <div class="windows-explorer">
             <div class="window">
                 <div class="window-titulo">
                     Mis Documentos
                     <div class="btn-ventana cerrar" title="Cerrar">X</div>
                     <div class="btn-ventana maximizar" title="Maximizar">[_]</div>
-                    <div class="btn-ventana minizar" title="Minimizar">_</div>
+                    <div class="btn-ventana minimizar" title="Minimizar">_</div>
                 </div>
                 <div class="window-menu">
+                    <div class="vl"></div>
                     <ul id="menu-ventanas">
                         <li>Archivo</li>
                         <li>Editar</li>
@@ -86,6 +105,7 @@
                     </div>
                 </div>
                 <div class="window-direccion">
+                    <div class="vl"></div>
                     Direccion
                     <div class="direccion">
                         <img src="./img/win98_icons/directory_open_file_mydocs.ico" alt="" /><span>C:\ Mis Documentos</span>
@@ -102,17 +122,25 @@
                     </div>
                     <div class="contenido-der">
                         <div class="contenido-iconos">
-                            <div class="window-icono">
-                                <img src="./img/win98_icons/write_wordpad.ico" alt="Curriculum" title="Curriculum Vitae">
-                                <p>Mi Curriculum</p>
+                            <div class="contenido-icono">
+                                <a href="https://3rchuss.github.io/JesusAbril/" target="_blank"><img src="./img/win98_icons/write_wordpad.ico" alt="Curriculum" title="Curriculum Vitae">
+                                <p>Curriculum Jesus Abril</p></a>
                             </div>
-                            <div class="window-icono">
-                                <img src="./img/win98_icons/computer_explorer.ico" alt="Mi pc" title="Muestra el contenido de tu PC">
-                                <p>Mi PC</p>
+                            <div class="contenido-icono">
+                                <a href="https://twitter.com/3rChuss" target="_blank"><img src="./img/win98_icons/html.ico" alt="twitter" title="Twitter">
+                                <p>Twitter</p></a>
+                            </div>
+                            <div class="contenido-icono">
+                                <a href="https://github.com/3rChuss" target="_blank"><img src="./img/win98_icons/html.ico" alt="Github" title="Github">
+                                <p>Github</p></a>
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="window-footer">
+                    <div class="footer-izq objects">objects</div>
+                    <div class="footer-centro">5.47 Kbs</div>
+                    <div class="footer-der">Mis documentos</div>
                 </div>
             </div>
         </div>
