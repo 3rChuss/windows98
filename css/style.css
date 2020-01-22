@@ -142,10 +142,10 @@ body {
     cursor: default;
 }
 .lostfocus {
-    border-right: var(--borde-claro);
-    border-bottom: var(--borde-claro);
-    border-top: var(--borde-oscuro);
-    border-left: var(--borde-oscuro);
+    border-right: var(--borde-oscuro);
+    border-bottom: var(--borde-oscuro);
+    border-top: var(--borde-claro);
+    border-left: var(--borde-claro);
     cursor: default;
     line-height: 25px;
     width: 200px;
@@ -519,6 +519,13 @@ p {
 }
 .seleccionado {
     border: 1px dotted blue;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,255,.2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,255,.2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,255,.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,255,.2) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
 }
 
 
