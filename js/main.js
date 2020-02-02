@@ -1,6 +1,28 @@
 $(document).ready(function(){
     //Damos funcionalidad a nuestro Milenial windows98
 
+    // THE HELL BLUE SCREEN ERROR /////////////////////////////////////////////////////////////
+    var totalClicks = 0;
+    var newRandom = Math.floor((Math.random() * 10) + 1);
+    var audio = new Audio();
+    audio.src="https://acmemkt.com/wp-content/uploads/2020/01/windows_xp_error.mp3";
+    $('body').click(function (e) {
+    totalClicks += 1;
+    if (totalClicks == newRandom) {
+        $('.pantallazo').toggle();
+        audio.play();    
+    }
+    console.log('random ' + newRandom)
+    console.log('click ' + totalClicks);
+    });
+    $(document).keydown( (e) => {
+        if( $('.pantallazo').is(":visible")){
+        $('.pantallazo').toggle();
+        totalClicks = 0;
+        newRandom = Math.floor((Math.random() * 10) + 1);
+        }
+    });
+
     // INICIO ///////////////////////////////////////////////////////////////////////////////////////////////
     $('.btn-inicio').click(function (e) { 
         e.stopPropagation();

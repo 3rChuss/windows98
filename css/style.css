@@ -528,6 +528,16 @@ p {
     background-size: 3px 3px;
 }
 
+.pantallazo {
+    background-image: url('https://i0.wp.com/clipset.20minutos.es/wp-content/uploads/2018/04/BSOD.jpg?resize=1024%2C768&ssl=1');
+  background-size: cover;
+  height : 100vh;
+  top: -10px;
+  left: -10px;
+  position: relative;
+  z-index: 999999;
+  display: none;
+}
 
 
 
